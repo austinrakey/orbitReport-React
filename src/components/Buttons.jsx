@@ -1,4 +1,7 @@
-import satData from "./components/satData";
+import React from 'react';
+import satData from "./satData";
+import styling from './styling.css';
+
 
 
 
@@ -6,8 +9,16 @@ import satData from "./components/satData";
 const Buttons = ({ filterByType, setSat, displaySats }) => {
   return (
     <div>
-      <button>Placeholder Button</button>
-      <button>All Orbits</button>
+{displaySats.map((sat, id) => {
+  return (
+    <button onClick={() => filterByType(sat)} key={id}>
+      {sat} Orbit
+    </button>
+  );
+})}
+
+
+      <button onClick={() => setSat(satData)}>All Orbits</button>
     </div>
   );
 };
