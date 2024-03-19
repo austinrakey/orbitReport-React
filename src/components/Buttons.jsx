@@ -1,3 +1,8 @@
+import satData from "./components/satData";
+
+
+
+
 const Buttons = ({ filterByType, setSat, displaySats }) => {
   return (
     <div>
